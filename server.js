@@ -1,3 +1,27 @@
+/******************************************************************************** 
+*  WEB322 – Assignment 05 
+* 
+*  I declare that this assignment is my own work and completed based on my 
+*  current understanding of the course concepts. 
+*  
+*  The assignment was completed in accordance with: 
+*  a. The Seneca's Academic Integrity Policy 
+*  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html 
+*  
+*  b. The academic integrity policies noted in the assessment description 
+*   
+*  I did NOT use generative AI tools (ChatGPT, Copilot, etc) to produce the code  
+*  for this assessment. 
+* 
+*  Name: _Elshad Humbatli______________ Student ID: 107143240______________  
+* 
+********************************************************************************/ 
+
+
+
+
+
+
 const HTTP_PORT = process.env.PORT || 8080;
 
 const express = require("express");
