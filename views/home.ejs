@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+
+<body>
+<div
+  class="hero h-[70vh]"
+  style="background-image: url(https://ww3.rics.org/content/dam/rics/images/modus/built-environment/february-2023/baku/header_baku-cityscape_baku_modus_feb-23_SHUTTERSTOCK.jpg);background-size: cover; background-position: center;">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-5xl font-bold">Baku</h1>
+      <p class="mb-5">
+ Baku, the capital of Azerbaijan, is a vibrant city located on the western coast of the Caspian Sea. 
+It blends ancient history with modern architecture, featuring landmarks like the Flame Towers and the medieval Old City (Icherisheher). 
+Known for its oil-rich economy and dynamic nightlife, Baku also hosts international events such as Formula 1 races.
+ The city’s seaside boulevard and unique cultural mix make it a captivating destination for travelers.
+      </p>
+
+    </div>
+  </div>
+</div>
+  <div class="flex justify-end px-8 py-6">
+    <button class="bg-blue-700 text-white py-2 px-4 rounded">
+      <a href="/memories/add">Add Location</a>
+    </button>
+  </div>
+   <div class="overflow-x-auto mt-6">
+  <table class="table table-zebra">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Address</th>
+        <th>Comments</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% location.forEach(loc => { %>
+        <tr>
+          <td><img src="<%= loc.image %>" class="w-24 h-16 object-cover" /></td>
+          <td><%= loc.name %></td>
+          <td><%= loc.category %></td>
+          <td><%= loc.address %></td>
+          <td><%= loc.comments %></td>
+          <td> <a href="/memories/delete/<%=loc.id%>" class="btn btn-sm btn-error">Delete</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

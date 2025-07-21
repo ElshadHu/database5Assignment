@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+
+<body>
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content text-center flex flex-col items-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Hello there</h1>
+      <p class="py-6">
+        You can add your favorite locations by filling in this form below
+      </p>
+    </div>
+
+   <form action="/memories/add" method="POST" class="card shadow-xl bg-white w-full max-w-lg p-8 mt-6">
+  <div class="mb-4">
+    <label for="name" class="block mb-2 font-bold text-left text-gray-700">Name of the Activity</label>
+    <input type="text" name="name" id="name" placeholder="e.g., Flame Towers" required class="input input-bordered w-full" />
+  </div>
+
+  <div class="mb-4">
+    <label for="category" class="block mb-2 font-bold text-left text-gray-700">Choose the category</label>
+    <select name="category" id="category" required class="select select-bordered w-full bg-white text-gray-800 z-10">
+      <option value="" disabled selected>Select category</option>
+      <option value="outdoors">Outdoors</option>
+      <option value="festival">Festival</option>
+      <option value="holiday">Holiday</option>
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="address" class="block mb-2 font-bold text-left text-gray-700">Address</label>
+    <input type="text" name="address" id="address" placeholder="e.g., Park Bulvar" required class="input input-bordered w-full" />
+  </div>
+
+  <div class="mb-4">
+    <label for="comments" class="block mb-2 font-bold text-left text-gray-700">Your Review</label>
+    <textarea name="comments" id="comments" placeholder="Share your thoughts..." required class="textarea textarea-bordered w-full"></textarea>
+  </div>
+
+  <div class="mb-4">
+    <label for="image" class="block mb-2 font-bold text-left text-gray-700">Upload an image URL</label>
+    <input type="url" name="image" id="image" placeholder=" https://." required class="input input-bordered w-full" />
+  </div>
+
+  <button type="submit" required class="btn btn-primary w-full">Add Location</button>
+</form>
+
+</div>
+
+</body>
+
+</html>
